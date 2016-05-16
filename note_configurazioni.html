@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Note configurazioni varie</title>
+<style>
+ body {
+    max-width: 1024px;
+}
+</style>
+</head>
+<body>
+
+<h1>perl on xampp </h1>
+<p>
+I needed to try out some perl cgi scripts so I thought to use the same xampp server I used for my PHP tests. I needed some library modules that I already installed using perl from command line. It didn't work because xampp uses its ows perl binaries. I coudn't install modules I nedeed by CPAN (in XAMPP) becouse of some messy compiling error. So I thought to use my already-installed system libraries by including their path in the INC array. I added this
+<code>
+export PERL5LIB=/etc/perl:\/usr/local/lib/perl/5.18.2:\/usr/local/share/perl/5.18.2:\/usr/lib/perl5:\/usr/share/perl5:\/usr/lib/perl/5.18:\/usr/share/perl/5.18:\/usr/local/lib/site_perl
+</code>
+into <code> /opt/lampp/xampp </code>.
+
+
+</p>
+
+
+
+</body>
+</html>
