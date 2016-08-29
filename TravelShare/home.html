@@ -17,12 +17,14 @@
 
   <link rel="icon" href="Immagini/TS_icon.png" type="image/x-icon" />
   <link rel="shortcut icon" href="Immagini/TS_icon.png" type="image/x-icon" />
-  <script type="application/javascript" src="javascript/jquery-ui-1.12.0/jquery-ui.js"></script>
+  <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
   <script type="application/javascript" src="javascript/travelshare.js" ></script>
 
  </head>
 
- <body>
+ <body onload="caricamento_home()">
 
   <div id="header">
    <a href="home.html" tabindex="1"><img src="Immagini/banner.png" id="banner" alt="Banner Travel Share - Link diretto alla Home" /></a>
@@ -34,18 +36,19 @@
 
 	<h1>Cerca un passaggio!</h1>
 
-	<form action="" method="get">
+	<form action="" method="get" onsubmit="return valida_submit_home();">
 	<fieldset><legend>Ricerca di un passaggio</legend>
 	<label for="partenza">Partenza</label><br />
-	<input type="text" id="partenza" name="partenza" tabindex="6"></input><br />
+	<input type="text" id="partenza" name="partenza" tabindex="6" onblur="valida_nome('partenza','Luogo di partenza')"></input><br />
 	<p id="partenza_err" class="errore">[%partenza_err%]</p>
 	<label for="arrivo">Arrivo</label><br />
-	<input type="text" id="arrivo" name="arrivo" tabindex="7"></input><br />
+	<input type="text" id="arrivo" name="arrivo" tabindex="7" onblur="valida_nome('arrivo','Luogo di arrivo')"></input><br />
 	<p id="arrivo_err" class="errore">[%arrivo_err%]</p>
 	<label for="data">Data</label><br />
-	<input type="text" id="data" name="data" tabindex="8"></input><br />
+	<input type="text" id="data" name="data" tabindex="8" onblur="valida_data('data')"></input><br />
 	<p id="data_err" class="errore">[%data_err%]</p>
 	<input type="submit" value="Cerca" tabindex="9"></input>
+  <p id="submitbutton_err" class="errore"></p>
 	</fieldset>
 	</form>
 

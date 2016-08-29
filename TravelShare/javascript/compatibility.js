@@ -1,2 +1,4 @@
 
-function test_compatible_animation()
+function test_compatible_animation(){
+  return true;
+}

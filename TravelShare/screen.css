@@ -230,7 +230,7 @@ input[type=submit]{
 	margin-top : 2%;
 	margin-bottom : 1%;
 	margin-left : 20%;
-	
+
 }
 
 textarea{
@@ -244,7 +244,7 @@ textarea{
 	font-family : Verdana, Helvetica, sans-serif;
 }
 
-fieldset { 
+fieldset {
     /*display: block;
     margin-left: 2px;
     margin-right: 2px;
@@ -252,11 +252,11 @@ fieldset {
     padding-bottom: 0.625em;
     padding-left: 0.75em;
     padding-right: 0.75em;*/ /*	valori std */
-	
+
 	/*margin : 0;
 	padding : 0;
     border: none ;/*2px groove*/
-	
+
 	background-color : #cccccc;
 	border-radius : 4px;
 	border : 1px solid #666666;
@@ -291,13 +291,15 @@ legend { /******** TEST *******/
 	background-color : white;
 	border-radius : 10px;
 	padding : 0 0.5cm;
+	cursor: pointer;
 }
 
 .conversazione a{
-	display : block; 
+	display : block;
 	padding : 0.5cm 0;
 	text-decoration : none;
 	color : black;
+	/*cursor: default;*/
 }
 
 .nuova{ /*doppia classe o due distinte*/
@@ -364,7 +366,7 @@ legend { /******** TEST *******/
 	background-color : white;
 	margin-bottom : 2%;
 	margin-top : 2%;
-	border-radius : 15px; /* border radius non è totalmente compatibile, ma dovrebbe andare bene lo stesso; 
+	border-radius : 15px; /* border radius non è totalmente compatibile, ma dovrebbe andare bene lo stesso;
 									l'unica differenza è che se non funzia si vedrà spigoloso*/
 }
 
@@ -387,7 +389,7 @@ legend { /******** TEST *******/
 }
 
 .risultato a{
-	display : block; 
+	display : block;
 	padding : 0.5cm 0.5cm 0.4cm 0.5cm;
 	text-decoration : none;
 	color : black;
@@ -422,7 +424,7 @@ legend { /******** TEST *******/
 .preferenzeImg{ /* per set di 2-3 immagini */
 	height : 50px;
 	border : 1px solid;
-	
+
 }
 .marginRadioNascosto{
 	margin : 3% 5% 2% 5%; /* versione con radio nascosti */
@@ -455,7 +457,7 @@ input[type=radio]:checked + label>img { /* provvisorio */
 }
 
 .viaggio a{
-	display : block; 
+	display : block;
 	padding : 0.5cm 0.4cm 0.5cm 0.4cm;
 	text-decoration : none;
 	color : black;
@@ -518,7 +520,7 @@ input[type=radio]:checked + label>img { /* provvisorio */
 	.votiGroup label {
 		margin-right : 7.5%;
 	}
-	
+
 }
 
 @media screen and (min-width: 600px) {
@@ -528,11 +530,11 @@ input[type=radio]:checked + label>img { /* provvisorio */
 }
 
 @media screen and (min-width: 768px) {
-	
+
 	#bottoneMenu{
 		padding : 1.2%;
 		border-radius : 12px;
-	}	
+	}
 	#utente{
 		padding : 2%;
 	}
@@ -571,12 +573,12 @@ input[type=radio]:checked + label>img { /* provvisorio */
 		display : initial;
 	}
 	input[type=radio]{
-		margin-top: 3%; 
+		margin-top: 3%;
 	}
 	.descrizione{
 		padding : 3% 5% 3% 5%;
 		margin : 2% 3%; /* vogliamo che rientri un po'? */
-	}	
+	}
 	.infoGuidatore{
 		display : initial;
 	}
@@ -596,9 +598,9 @@ input[type=radio]:checked + label>img { /* provvisorio */
 	#bottoneMenu{
 		display : none;
 	}
-	
+
 	/**  BARRA UTENTE  **/
-	
+
 	html{
 		max-width : 1024px;
 		border : 1px solid black;
@@ -606,7 +608,7 @@ input[type=radio]:checked + label>img { /* provvisorio */
 		border-bottom : 0px;
 		background-color : grey;
 	}
-	
+
 	#contenuto{
 		padding : 0% 5% 5% 5%;
 	}
@@ -618,7 +620,7 @@ input[type=radio]:checked + label>img { /* provvisorio */
 		padding : 5%;
 		padding-bottom : 4%;
 	}
-	
+
 	#utente{/* problema del relative: occupa spazio nella posizione originale; ignoriamo? */
 		position : relative; /* così rimane in una posizione decente e semi fissa dal 1024 in su */
 		top : -35px;
@@ -632,14 +634,14 @@ input[type=radio]:checked + label>img { /* provvisorio */
 		padding-left : 3%;
 		padding-right : 3%;
 	}
-	
+
 	h1{
 		margin-top : 65px;
 		margin-bottom : 1.1%;
 	}
-	
+
 	/**  LISTA MENU'  **/
-	
+
 	#menu{
 		position : absolute;
 		top : 51px;
@@ -665,12 +667,12 @@ input[type=radio]:checked + label>img { /* provvisorio */
 	.frecceMenu{
 		display : none;
 	}
-	
+
 	#footer{
 		border-top : 1px solid #666666;
 		padding : 3%;
 	}
-	
+
 	.bottone{
 		padding : 1.5%;
 	}
@@ -680,5 +682,5 @@ input[type=radio]:checked + label>img { /* provvisorio */
 	.no{
 		margin : 4% 30% 1% 30%;
 	}
-	
+
 }

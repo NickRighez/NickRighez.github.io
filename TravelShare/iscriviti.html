@@ -17,7 +17,9 @@
 
   <link rel="icon" href="Immagini/TS_icon.png" type="image/x-icon" />
   <link rel="shortcut icon" href="Immagini/TS_icon.png" type="image/x-icon" />
-  <script type="application/javascript" src="javascript/jquery-ui-1.12.0/jquery-ui.js"></script>
+  <!--<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" /> -->
   <script type="application/javascript" src="javascript/travelshare.js" ></script>
 
  </head>
@@ -34,32 +36,33 @@
 
    <h1>Iscriviti</h1>
 
-   <form action="" method="post">
+   <form action="" method="post" onsubmit="return valida_submit_iscrizione()">
     <fieldset><legend>Iscrizione al sito</legend>
-    <input type="radio" name="sesso" id="maschio" value="maschio" checked="checked" tabindex="6"></input><label  for="maschio">Maschio</label><!--<br />-->
-    <input type="radio" name="sesso" id="femmina" value="femmina"></input><label  for="femmina">Femmina</label><br />
     <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" value="[%nome%]" tabindex="7"></input><br />
+    <input type="text" id="nome" name="nome" value="[%nome%]" tabindex="7" onblur="valida_nome('nome','Nome')"></input><br />
 	<p id="nome_err" class="errore">[%nome_err%]</p>
     <label for="cognome">Cognome:</label>
-    <input type="text" id="cognome" name="cognome" value="[%cognome%]" tabindex="8"></input><br />
+    <input type="text" id="cognome" name="cognome" value="[%cognome%]" tabindex="8" onblur="valida_nome('cognome','Cognome')"></input><br />
 	<p id="cognome_err" class="errore">[%cognome_err%]</p>
 	<label for="username"><span xml:lang="en" lang="en">Username:</span></label>
-    <input type="text" id="username" name="username" value="[%username%]" tabindex="9"></input><br />
+    <input type="text" id="username" name="username" value="[%username%]" tabindex="9" onblur="valida_username()"></input><br />
 	<p id="username_err" class="errore">[%username_err%]</p>
+  <input type="radio" name="sesso" id="maschio" value="maschio" checked="checked" tabindex="6"></input><label  for="maschio">Maschio</label><!--<br />-->
+  <input type="radio" name="sesso" id="femmina" value="femmina"></input><label  for="femmina">Femmina</label><br />
     <label for="email"><span xml:lang="en" lang="en">Email:</span></label>
-    <input type="text" id="email" name="email" value="[%email%]" tabindex="10"></input><br />
+    <input type="text" id="email" name="email" value="[%email%]" tabindex="10" onblur="valida_email('email')"></input><br />
 	<p id="email_err" class="errore">[%email_err%]</p>
     <label for="password"><span xml:lang="en" lang="en">Password:</span></label>
-    <input type="password" id="password" name="password" tabindex="11"></input><br />
+    <input type="password" id="password" name="password" tabindex="11" onblur="valida_password('password')"></input><br />
 	<p id="password_err" class="errore">[%password_err%]</p>
     <label for="conferma">Conferma <span xml:lang="en" lang="en">Password:</span></label>
-    <input type="password" id="conferma" name="conferma" tabindex="12"></input><br />
+    <input type="password" id="conferma" name="conferma" tabindex="12" onblur="valida_password('conferma')"></input><br />
 	<p id="conferma_err" class="errore">[%conferma_err%]</p>
     <label for="anno">Anno di nascita:</label>
-    <input type="text" id="anno" name="anno" value="[%anno%]" tabindex="13"></input><br />
+    <input type="text" id="anno" name="anno" value="[%anno%]" tabindex="13" onblur="valida_anno_nasc()"></input><br />
 	<p id="anno_err" class="errore">[%anno_err%]</p>
     <input type="submit" value="Invia" tabindex="14"></input>
+      <p id="submitbutton_err" class="errore"></p>
     </fieldset>
    </form>
 

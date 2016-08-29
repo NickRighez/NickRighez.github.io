@@ -17,7 +17,9 @@
 
   <link rel="icon" href="Immagini/TS_icon.png" type="image/x-icon" />
   <link rel="shortcut icon" href="Immagini/TS_icon.png" type="image/x-icon" />
-  <script type="application/javascript" src="javascript/jquery-ui-1.12.0/jquery-ui.js"></script>
+  <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
   <script type="application/javascript" src="javascript/travelshare.js" ></script>
 
  </head>
@@ -36,23 +38,23 @@
 
   <div id="contenuto">
 	<h1>Modifica il profilo</h1>
-	<form action="" method="post">
+	<form action="test.html" method="post" onsubmit="var v =valida_submit_modifica_profilo(); return valida_submit_modifica_profilo();">
 	<fieldset><legend></legend>
 	<label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" value="[%nome%]" tabindex="9"></input><br />
-
+    <input type="text" id="nome" name="nome" value="[%nome%]" tabindex="9" onblur="valida_nome('nome','Nome')"></input><br />
+    	<p id="nome_err" class="errore">[%nome_err%]</p>
 	<label for="cognome">Cognome:</label>
-    <input type="text" id="cognome" name="cognome" value="[%cognome%]" tabindex="10"></input><br />
-
+    <input type="text" id="cognome" name="cognome" value="[%cognome%]" tabindex="10" onblur="valida_nome('cognome','Cognome')"></input><br />
+<p id="cognome_err" class="errore">[%cognome_err%]</p>
 	<label for="email"><span xml:lang="en" lang="en">Email:</span></label>
-    <input type="text" id="email" name="email" value="[%email%]" tabindex="11"></input><br />
-
+    <input type="text" id="email" name="email" value="[%email%]" tabindex="11" onblur="valida_email('email')"></input><br />
+<p id="email_err" class="errore">[%email_err%]</p>
     <label for="vecchiaPassword">Vecchia <span xml:lang="en" lang="en">Password:</span></label>
-    <input type="password" id="vecchiaPassword" name="vecchiaPassword" tabindex="12"></input><br />
+    <input type="password" id="vecchiaPassword" name="vecchiaPassword" tabindex="12" onblur="valida_password('vecchiaPassword')"></input><br />
 	<p id="vecchiaPassword_err" class="errore">[%vecchiaPassword_err%]</p>
 
     <label for="nuovaPassword">Nuova <span xml:lang="en" lang="en">Password:</span></label>
-    <input type="password" id="nuovaPassword" name="nuovaPassword" tabindex="13"></input><br />
+    <input type="password" id="nuovaPassword" name="nuovaPassword" tabindex="13" onblur="valida_password('nuovaPassword')"></input><br />
 	<p id="nuovaPassword_err" class="errore">[%nuovaPassword_err%]</p>
 
     <p>Sesso:
@@ -61,16 +63,20 @@
     </p>
 
     <label for="anno">Anno di nascita:</label>
-    <input type="text" id="anno" name="anno" value="[%anno%]" tabindex="15"></input><br />
+    <input type="text" id="anno" name="anno" value="[%anno%]" tabindex="15" onblur="valida_anno_nasc()"></input><br />
+    <p id="anno_err" class="errore">[%anno_err%]</p>
 
 	<label for="descrizioneForm">Descrizione:</label>
 	<textarea id="descrizioneForm" rows="0" cols="0" name="descrizioneForm" tabindex="16"> [%descrizioneForm%] </textarea>
 
+<!--   <fieldset><legend>Informazioni del guidatore</legend>  -->
 	<label for="annoPatente">Anno di rilascio della patente:</label>
-    <input type="text" id="annoPatente" name="annoPatente" value="[%annoPatente%]" tabindex="17"></input><br />
+    <input type="text" id="annoPatente" name="annoPatente" value="[%annoPatente%]" tabindex="17" onblur="valida_anno_pat()"></input><br />
+    <p id="annoPatente_err" class="errore">[%annoPatente_err%]</p>
 
 	<label for="auto">Auto:</label>
-    <input type="text" id="auto" name="auto" value="[%auto%]" tabindex="18"></input><br />
+    <input type="text" id="auto" name="auto" value="[%auto%]" tabindex="18" onblur="valida_nome('auto','Automobile')"></input><br />
+    <p id="auto_err" class="errore">[%auto_err%]</p>
 
 	<div id="preferenze">
 	<h2>Preferenze</h2>
@@ -112,8 +118,9 @@
 	</div>
 
 	</div>
-
+<!-- </fieldset> -->
 	<input type="submit" value="Invia" tabindex="23"></input>
+  <p id="submitbutton_err" class="errore"></p>
 	</fieldset>
 	</form>
 
