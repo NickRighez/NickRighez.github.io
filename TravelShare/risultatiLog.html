@@ -17,6 +17,8 @@
 
   <link rel="icon" href="Immagini/TS_icon.png" type="image/x-icon" />
   <link rel="shortcut icon" href="Immagini/TS_icon.png" type="image/x-icon" />
+
+
   <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
   <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
@@ -24,7 +26,7 @@
 
  </head>
 
- <body>
+ <body onload="caricamento_risultati()">
 
   <div id="header">
    <a href="homeLog.html" tabindex=""><img src="Immagini/banner.png" id="banner" alt="Banner Travel Share - Link diretto alla Home" /></a>
@@ -43,7 +45,13 @@
 	<h3>gg/mm/aaaa</h3>
 
 	<div class="risultato">
-	 <a href="singoloViaggioLog.html"><span class="partenza">Camposampiero</span> &#8594; <span class="arrivo">Castelfranco</span></a>
+	 <a href="singoloViaggioLog.html">
+     <span class="tratta" >
+     <span class="partenza">Llanfairpwllgwyngyl lgogerychwyrndrobwllll antysiliogogogoch </span> &#8594; <span class="arrivo">Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch</span>
+   </span>
+      <span class="pulsante_goto"> Vai &gt; </span>
+    </a>
+<div class="spacer"></div>
 
 	 <p>Ora: 12:37</p>
 

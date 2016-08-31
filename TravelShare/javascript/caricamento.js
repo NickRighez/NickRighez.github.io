@@ -19,3 +19,21 @@ function caricamento_messaggi(){
          return false;
     });
 }
+
+
+function caricamento_modifica_profilo(){
+  if(Modernizr.csstransitions){
+    alert("fuck now!!!");
+  }
+  else{
+        alert("fuck maybe a day!!!");
+  }
+}
+
+function caricamento_risultati(){
+  $('.risultato').click(function(){
+         window.location=$(this).find("a").attr("href");
+         $(this).find("a").attr("href").style.cursor = 'pointer';
+         return false;
+    });
+}

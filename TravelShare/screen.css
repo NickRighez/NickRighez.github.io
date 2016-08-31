@@ -190,6 +190,10 @@ li{
 
 /*NB: si può creare un placeholder con un immagine di sfondo dell'input*/
 
+#submitbutton_err{
+	text-align: center;
+}
+
 input{
 	font-size : 100%; /* per modificare la grandezza del testo nelle form*/
 }
@@ -391,9 +395,38 @@ legend { /******** TEST *******/
 
 .risultato a{
 	display : block;
-	padding : 0.5cm 0.5cm 0.4cm 0.5cm;
+	/*padding : 0.5cm 0.5cm 0.4cm 0.5cm;*/
 	text-decoration : none;
 	color : black;
+	vertical-align: center;
+}
+
+.spacer{
+	clear: both;
+}
+
+.tratta{
+	display: inline-block;
+	float: left;
+	width: 65%;
+	/*background-color: blue;*/
+	padding : 0.5cm 0.5cm 0.4cm 0.5cm;
+
+}
+
+.pulsante_goto{
+	display: inline-block;
+	float: right;
+	width: 3em;
+	padding-top: 0.5cm;
+	padding-bottom: 0.5cm;
+	margin-right: 1em;
+	text-decoration : underline;
+	text-align: right;
+	color : black;
+	/*background-color: green;*/
+	vertical-align: center;
+
 }
 
 .partenza{
